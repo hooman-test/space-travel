@@ -1,0 +1,14 @@
+.lf {
+  display: inline-block;
+  /*width: 150px;*/
+  padding: 5px;
+  margin: 0 10px 10px;
+  border: 1px solid #ccc;
+
+}
+
+.lfContainer {
+  overflow: scroll;
+  width: 100%;
+  height: 122px;
+}

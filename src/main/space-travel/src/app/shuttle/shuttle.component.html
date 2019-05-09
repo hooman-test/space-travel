@@ -1,0 +1,21 @@
+<input type="button" (click)="assignLatest()" value="Assign Latest">
+
+<div *ngIf="shuttles">
+  <div *ngFor="let s of shuttles" class="shuttleDeck">
+    <div class="title">Shuttle {{s.id + 1}}</div>
+    <div>Dir: {{s.direction}}</div>
+    <div>Cap: {{s.currentCapacity}}</div>
+    <div>Weight: {{s.currentWeight}}</div>
+    <div>Curr: {{s.currentPlanet}}</div>
+    <div>Dest: {{s.nextDestination}}</div>
+
+    <div *ngIf="s.passengers">
+      <div class="passenger_title">Passengers</div>
+      <div *ngFor="let p of s.passengers" class="passengers">
+        <span>{{p.id}}</span> | <span>{{p.destinationPlanet}}</span> | <span>{{p.weight}} Kg</span>
+      </div>
+    </div>
+
+    <div>Count: {{s.passengers.length}}</div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<h2>Passengers</h2>
+<div class="lfContainer">
+  <span class="lf" *ngFor="let f of forms">
+    {{f.weight}} Kg
+    <div>{{f.sourcePlanet}} -> {{f.destinationPlanet}}</div>
+  </span>
+</div>
+
+<!--<input type="button" (click)="showLatest();" value="Show Latest"/>-->
+<input type="button" (click)="getAllForms();" value="Refresh Passengers List"/>
+
+<div *ngIf="latestLifeForm">
+  {{latestLifeForm.weight}}
+  {{latestLifeForm.sourcePlanet}}
+  {{latestLifeForm.destinationPlanet}}
+</div>
